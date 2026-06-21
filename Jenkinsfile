@@ -1,10 +1,9 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             agent {
-            docker {}
+            docker {
                     image 'node:18-alphine'
                     reuseNode true
                 }
